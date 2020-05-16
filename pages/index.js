@@ -36,11 +36,17 @@ export default function Home({ movies }) {
           const date = new Date(movie.day);
           const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
           return <div className="movie" key={i}>
-            <div className="movie-day">
-              <span>{date.toLocaleDateString("en-US", options)}</span>
-            </div>
-            <div className="movie-title">{movie.name}</div>
-            <img className="movie-image" src={movie.image} />
+            <a href={movie.link} target="_blank">
+              <div className="movie-day">
+                <span>{date.toLocaleDateString("en-US", options)}</span>
+              </div>
+              <div className="movie-title">{movie.name}</div>
+              <img className="movie-image" src={movie.image} />
+              <div className="movie-rating">
+                <img src="/imdb.svg"/>
+                <div className="movie-star">{movie.rating}</div>
+              </div>
+            </a>
           </div>
         })}
       </main>
@@ -85,6 +91,7 @@ export default function Home({ movies }) {
         .movie {
           padding: 2rem 0;
           position: relative;
+          cursor: pointer;
         }
 
         .movie-title {
@@ -102,6 +109,25 @@ export default function Home({ movies }) {
           height: 13rem;
           object-fit: cover;
           margin-top: -0.8rem;
+        }
+
+        .movie-rating {
+          position: absolute;
+          right: 1em;
+          bottom: 1em;
+        }
+
+        .movie-rating img {
+          width: 70px;
+          margin-bottom: -100px; 
+        }
+
+        .movie-star {
+          background: url('/star.svg') no-repeat center center;
+          font-size: 1.1rem;
+          font-weight: bold;
+          padding: 1.3rem;
+          text-align: center;
         }
 
         .movie-day {
