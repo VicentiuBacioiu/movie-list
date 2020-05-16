@@ -27,7 +27,7 @@ export default function Home({ movies }) {
         </h1>
 
         <p className="description">
-          What movie are we seeing tonight?
+          What movie are we watching tonight?
         </p>
       </div>
 
@@ -43,7 +43,7 @@ export default function Home({ movies }) {
               <div className="movie-title">{movie.name}</div>
               <img className="movie-image" src={movie.image} />
               <div className="movie-rating">
-                <img src="/imdb.svg"/>
+                <img src="/imdb.svg" />
                 <div className="movie-star">{movie.rating}</div>
               </div>
             </a>
@@ -105,10 +105,16 @@ export default function Home({ movies }) {
         }
 
         .movie-image {
-          width: 100%;
+          width: 45vw;
           height: 13rem;
           object-fit: cover;
           margin-top: -0.8rem;
+        }
+
+        @media(max-width: 720px) {
+          .movie-image {
+            width: 100vw;
+          }
         }
 
         .movie-rating {
@@ -224,6 +230,7 @@ export default function Home({ movies }) {
 
         body {
           background: #101010;
+          overflow-x: hidden;
         }
 
         * {
