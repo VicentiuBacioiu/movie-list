@@ -43,6 +43,13 @@
     },
     {
         "day": "2020-05-30",
+        "name": "The Whole Nine Yards",
+        "image": "https://i.imgur.com/8TQKRio.jpg",
+        "link": "https://www.imdb.com/title/tt0190138/",
+        "rating": 6.7
+    },
+    {
+        "day": "2020-05-31",
         "name": "Stuber",
         "image": "https://i.imgur.com/W3kPsjX.png",
         "link": "https://www.imdb.com/title/tt7734218/",
