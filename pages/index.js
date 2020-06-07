@@ -36,16 +36,16 @@ export default function Home({ movies }) {
           const date = new Date(movie.day);
           const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
           return <div className="movie" key={i}>
-            <a href={movie.link} target="_blank">
-              <div className="movie-day">
+            {/* <div className="movie-day">
                 <span>{date.toLocaleDateString("en-US", options)}</span>
-              </div>
+              </div> */}
+            <a href={movie.trailer} target="_blank">
               <div className="movie-title">{movie.name}</div>
               <img className="movie-image" src={movie.image} />
-              <div className="movie-rating">
-                <img src="/imdb.svg" />
-                <div className="movie-star">{movie.rating}</div>
-              </div>
+            </a>
+            <a href={movie.imdb} target="_blank" className="movie-rating">
+              <img src="/imdb.svg" />
+              <div className="movie-star">{movie.rating}</div>
             </a>
           </div>
         })}
