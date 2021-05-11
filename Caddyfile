@@ -1,4 +1,0 @@
-raspberrypi:80 {
-    root * /var/www/movie-list 
-    file_server
-}

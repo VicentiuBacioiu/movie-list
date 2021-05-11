@@ -1,12 +1,13 @@
 {
-  "name": "learn-starter",
+  "name": "movie-list",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "prod": "lite-server --baseDir ./out"
   },
   "dependencies": {
     "next": "9.3.5",

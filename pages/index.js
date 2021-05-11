@@ -27,7 +27,7 @@ export default function Home({ movies }) {
         </h1>
 
         <p className="description">
-          What movie are we watching tonight?
+          Movies to watch
         </p>
       </div>
 
@@ -52,8 +52,8 @@ export default function Home({ movies }) {
       </main>
 
       <footer>
-        Made with Love by
-          <img src="/bunny.svg" alt="Bunny Logo" className="logo" />&nbsp;&nbsp;Bunny
+        Made by
+          <img src="/star.svg" alt="Star Logo" className="logo" />&nbsp;&nbsp;Vic
       </footer>
 
       <style jsx>{`
